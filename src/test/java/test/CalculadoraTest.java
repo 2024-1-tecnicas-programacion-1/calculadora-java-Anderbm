@@ -56,8 +56,13 @@ public class CalculadoraTest {
         double valorActual = Calculadora.calcular(10, 3, '%');
         assertEquals(valorEsperado, valorActual);
     }
-
     @Test
+    public void testRaiz() {
+        double valorEsperado = 2;
+        double valorActual = Calculadora.calcular(8, 3, 'r');
+        assertEquals(valorEsperado, valorActual);
+    }
+    
     public void testOperacionInvalida() {
         assertThrows(IllegalArgumentException.class, () -> {
             Calculadora.calcular(5, 3, 'x');
